@@ -1,0 +1,21 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
+  
+#headers {
+   text-align: center; 
+}
+
+#breedForm {
+    font-size: large;
+    font-weight: bolder;
+}
+
+#DINGO {
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+}

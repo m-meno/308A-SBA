@@ -6,7 +6,7 @@
         headers: {
         "x-api-key": `live_hudKAJxap4eIfy2oapeBY0rIq9CVN2fvPRXatZUGlqprvho2VPV67IHJGVM7RXh2`
         } });
-        createDisplay(res.data);
+        loadBreeds(res.data);
     } catch(err) {
       console.error(`Error`)
     }
@@ -15,9 +15,9 @@
 let form = document.getElementById('breedForm');
 breedForm.addEventListener(`submit`, handleSubmit);    
 
-function createDisplay(dataArray){
+function loadBreeds(dataArray){
     const main = document.getElementById(`main`);
-    let list = document.createElement(`ul`);
+    let list = document.createElement(`ol`);
     main.appendChild(list);
     console.log(dataArray);
     dataArray.forEach((el)=>{
@@ -44,7 +44,6 @@ async function handleSubmit(e){
     //     alert(`Incorrect search term - please enter at least 4 letters.`);
     //     throw Error(`Incorrect or Empty SearchTerm`);
     //    }
-        //if (input.value == el.name)
 
        let res = await axios.get(`https://api.thedogapi.com/v1/images/search?breed_ids=${input.value}`);
        let pic = document.getElementById(`dogPhoto`);
