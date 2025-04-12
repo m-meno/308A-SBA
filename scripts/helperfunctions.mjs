@@ -56,3 +56,24 @@ async function handleSubmit(e){
     }
 };
 
+let game = document.getElementsByClassName(`dingo`);
+const arr = Array.from(game);
+    
+function addListener(){
+    arr.forEach((el)=>{
+    el.addEventListener('click', handleClick);    
+    });
+}
+
+addListener();
+//game.addEventListener('click', handleClick);
+
+function handleClick(e){
+    addListener();
+    prompt(`What breed did you see?!`);
+    // if (prompt.input == ``){
+    //     alert(`Please enter a dog breed!`)
+    // }
+    this.style.color = `red`;
+
+}
