@@ -12,10 +12,26 @@ body {
 #breedForm {
     font-size: large;
     font-weight: bolder;
+    display: flex;
+    text-align: center;
+}
+
+#form {
+    display: flex;
+    justify-content: center;
 }
 
 #DINGO {
     font-size: xx-large;
     display: flex;
     justify-content: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    font-size: large;
+    font-weight: bolder;
 }

@@ -7,6 +7,7 @@
         "x-api-key": `live_hudKAJxap4eIfy2oapeBY0rIq9CVN2fvPRXatZUGlqprvho2VPV67IHJGVM7RXh2`
         } });
         loadBreeds(res.data);
+        console.lof(res.data);
     } catch(err) {
       console.error(`Error`)
     }
@@ -17,12 +18,13 @@ breedForm.addEventListener(`submit`, handleSubmit);
 
 function loadBreeds(dataArray){
     const main = document.getElementById(`main`);
-    let list = document.createElement(`ol`);
+    let list = document.createElement(`ul`);
+    //list.style.listStyleType.
     main.appendChild(list);
     console.log(dataArray);
     dataArray.forEach((el)=>{
         let listItem = document.createElement(`li`);
-        listItem.innerHTML = `${el.name}`;
+        listItem.innerHTML = `${el.id}. ${el.name}`;
         list.appendChild(listItem);
         let dogImage = document.createElement(`img`);
         dogImage.src = el.image.url;
@@ -47,7 +49,7 @@ async function handleSubmit(e){
 
        let res = await axios.get(`https://api.thedogapi.com/v1/images/search?breed_ids=${input.value}`);
        let pic = document.getElementById(`dogPhoto`);
-       pic.innerHTML = `<img height = "200 em" src= ${res.data[0].url} alt = ${input.value}/>`;
+       pic.innerHTML = `<img height = "300 em" src= ${res.data[0].url} alt = ${input.value}/>`;
 
 
        console.log(res.data);
@@ -70,9 +72,9 @@ addListener();
 
 function handleClick(e){
     addListener();
-    prompt(`What breed did you see?!`);
-    // if (prompt.input == ``){
-    //     alert(`Please enter a dog breed!`)
+    let playerInput = prompt(`Hooray! What breed did you see?`);
+    // if (playerInput.length === ``){
+    // alert(`Please enter a dog breed!`);
     // }
     this.style.color = `red`;
 
