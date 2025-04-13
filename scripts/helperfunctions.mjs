@@ -73,9 +73,9 @@ addListener();
 function handleClick(e){
     addListener();
     let playerInput = prompt(`Hooray! What breed did you see?`);
-    // if (playerInput.length === ``){
-    // alert(`Please enter a dog breed!`);
-    // }
+    if (playerInput.length == ``){
+    alert(`Please enter a dog breed!`);
+    }
     this.style.color = `red`;
 
 }
