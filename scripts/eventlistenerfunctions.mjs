@@ -1,7 +1,7 @@
 export {handleClick, handleSubmit, addListener};
 
 let form = document.getElementById('breedForm');
-breedForm.addEventListener(`submit`, handleSubmit);    
+form.addEventListener(`submit`, handleSubmit);    
 
 async function handleSubmit(e){
     e.preventDefault();
