@@ -22,7 +22,7 @@ async function handleSubmit(e){
 
        console.log(res.data);
     } catch(err) {
-        console.error(`Error`);
+        alert(`We don't have that number in our database. Please try a different number.`);
     }
 };
 
