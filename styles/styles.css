@@ -35,3 +35,9 @@ li {
     font-size: large;
     font-weight: bolder;
 }
+
+#loadedPhoto{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}

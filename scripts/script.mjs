@@ -12,9 +12,8 @@ import {handleClick, addListener} from "./eventlistenerfunctions.mjs";
         "x-api-key": `live_hudKAJxap4eIfy2oapeBY0rIq9CVN2fvPRXatZUGlqprvho2VPV67IHJGVM7RXh2`
         } });
         loadBreeds(res.data);
-        console.lof(res.data);
     } catch(err) {
-      console.error(`Error`)
+      console.error(`Error`);
     }
 })();
 

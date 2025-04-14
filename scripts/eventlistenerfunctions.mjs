@@ -39,8 +39,13 @@ function handleClick(e){
     addListener();
     let playerInput = prompt(`Hooray! What breed did you see?`);
     if (playerInput.length == ``){
-    alert(`Please enter a dog breed!`);
+        alert(`Please enter a dog breed!`);
+    } else {
+        this.style.color = `red`; 
+        let spottedBreedList = document.getElementById("recordedBreeds");
+        let breedsSpotted = document.createElement(`li`);
+        spottedBreedList.appendChild(breedsSpotted);
+        breedsSpotted.textContent = playerInput;
     }
-    this.style.color = `red`;
 
 }
