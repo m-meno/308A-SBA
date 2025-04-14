@@ -7,14 +7,8 @@ async function handleSubmit(e){
     e.preventDefault();
     console.log(`Testing`);
     let input = document.getElementById(`breedSearch`);
-    //console.log(input.value);
-    
-    try {
-    //    if (input.value.length > 4 || input.value.length == 0) {
-    //     alert(`Incorrect search term - please enter at least 4 letters.`);
-    //     throw Error(`Incorrect or Empty SearchTerm`);
-    //    }
 
+    try {
        let res = await axios.get(`https://api.thedogapi.com/v1/images/search?breed_ids=${input.value}`);
        let pic = document.getElementById(`dogPhoto`);
        pic.innerHTML = `<img height = "300 em" src= ${res.data[0].url} alt = ${input.value}/>`;

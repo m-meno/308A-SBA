@@ -1,7 +1,7 @@
 
 import {loadBreeds} from "./helperfunctions.mjs";
 
-import {handleClick, addListener} from "./eventlistenerfunctions.mjs";
+import {addListener} from "./eventlistenerfunctions.mjs";
 
 
 
@@ -17,11 +17,6 @@ import {handleClick, addListener} from "./eventlistenerfunctions.mjs";
     }
 })();
 
-// let form = document.getElementById('breedForm');
-// breedForm.addEventListener(`submit`, handleSubmit);   
-
-// let game = document.getElementsByClassName(`dingo`);
-// const arr = Array.from(game);
 
 addListener();
 
