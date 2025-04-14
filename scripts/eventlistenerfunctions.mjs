@@ -38,14 +38,26 @@ function addListener(){
 function handleClick(e){
     addListener();
     let playerInput = prompt(`Hooray! What breed did you see?`);
-    if (playerInput.length == ``){
-        alert(`Please enter a dog breed!`);
-    } else {
-        this.style.color = `red`; 
-        let spottedBreedList = document.getElementById("recordedBreeds");
-        let breedsSpotted = document.createElement(`li`);
-        spottedBreedList.appendChild(breedsSpotted);
-        breedsSpotted.textContent = playerInput;
+    let spottedBreedList = document.getElementById("recordedBreeds");
+    let listRecord = spottedBreedList.getElementsByTagName(`li`);
+    if (listRecord.length < 4){
+        if (playerInput.length == ``){
+            alert(`Please enter a dog breed!`);
+        } else {
+            this.style.color = `red`; 
+            let breedsSpotted = document.createElement(`li`);
+            spottedBreedList.appendChild(breedsSpotted);
+            breedsSpotted.textContent = playerInput;
+        }
+    } else if (listRecord.length === 4){
+        if (playerInput.length == ``){
+            alert(`Please enter a dog breed!`);
+        } else {
+            this.style.color = `red`; 
+            let breedsSpotted = document.createElement(`li`);
+            spottedBreedList.appendChild(breedsSpotted);
+            breedsSpotted.textContent = playerInput;
+            alert(`You got DINGO!!!`);
+        }
     }
-
 }

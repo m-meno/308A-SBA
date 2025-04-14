@@ -20,7 +20,6 @@ export {loadBreeds};
 function loadBreeds(dataArray){
     const main = document.getElementById(`main`);
     let list = document.createElement(`ul`);
-    //list.style.listStyleType.
     main.appendChild(list);
     console.log(dataArray);
     dataArray.forEach((el)=>{
@@ -31,7 +30,6 @@ function loadBreeds(dataArray){
         dogImage.src = el.image.url;
         dogImage.style.height = `300px`;
         list.appendChild(dogImage);
-        //console.log(el.name, el.id);
     });
 }
 
@@ -68,15 +66,3 @@ function loadBreeds(dataArray){
 //     });
 // }
 
-// addListener();
-// //game.addEventListener('click', handleClick);
-
-// function handleClick(e){
-//     addListener();
-//     let playerInput = prompt(`Hooray! What breed did you see?`);
-//     if (playerInput.length == ``){
-//     alert(`Please enter a dog breed!`);
-//     }
-//     this.style.color = `red`;
-
-// }
